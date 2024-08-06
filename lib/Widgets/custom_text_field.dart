@@ -10,6 +10,13 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      validator: (value) {
+        if (value?.isEmpty ?? true) {
+          return 'field required';
+        } else {
+          return null;
+        }
+      },
       onSaved: onSaved,
       maxLines: maxLine,
       cursorColor: KprimaryColor,
