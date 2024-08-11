@@ -27,7 +27,9 @@ class CustomListView extends StatelessWidget {
                           MaterialPageRoute(
                               builder: (context) => const EditNotesView()));
                     },
-                    child: const NoteItem()),
+                    child: NoteItem(
+                      note: notes[index],
+                    )),
               );
             });
       },
