@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_note_app/Widgets/custom_appBar.dart';
 import 'package:my_note_app/Widgets/custom_text_field.dart';
+import 'package:my_note_app/Widgets/editnotecolorList.dart';
 import 'package:my_note_app/cubits/fetchNotesCubit/cubit/notes_cubit_cubit.dart';
 import 'package:my_note_app/models/note_model.dart';
 
@@ -15,6 +16,7 @@ class EditNotesBody extends StatefulWidget {
 
 class _EditNotesBodyState extends State<EditNotesBody> {
   String? title, content;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -52,7 +54,11 @@ class _EditNotesBodyState extends State<EditNotesBody> {
             },
             hintText: 'content',
             maxLine: 5,
-          )
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          ColorlistEditView(note: widget.note!),
         ],
       ),
     );

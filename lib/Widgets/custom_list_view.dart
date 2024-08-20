@@ -16,7 +16,7 @@ class CustomListView extends StatelessWidget {
             BlocProvider.of<NotesCubit>(context).noteslist ?? [];
         return ListView.builder(
             itemCount: notes.length,
-            padding: EdgeInsets.symmetric(vertical: 16),
+            padding: const EdgeInsets.symmetric(vertical: 16),
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.symmetric(vertical: 4),

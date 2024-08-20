@@ -8,7 +8,7 @@ class ColorItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 6),
       child: isActive
           ? CircleAvatar(
               backgroundColor: Colors.white,

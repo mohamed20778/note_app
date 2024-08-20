@@ -1,6 +1,8 @@
+// ignore: depend_on_referenced_packages
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+// ignore: unnecessary_import
 import 'package:meta/meta.dart';
 import 'package:my_note_app/constants.dart';
 import 'package:my_note_app/models/note_model.dart';

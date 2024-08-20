@@ -30,7 +30,7 @@ class NoteItem extends StatelessWidget {
             ListTile(
               title: Text(
                 note.title,
-                style: TextStyle(fontSize: 26, color: Colors.black),
+                style: const TextStyle(fontSize: 26, color: Colors.black),
               ),
               subtitle: Text(
                 note.subTitle,

@@ -1,3 +1,6 @@
+// ignore_for_file: file_names
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_note_app/Widgets/add_noteform.dart';
@@ -14,7 +17,9 @@ class AddNoteBottomSheet extends StatelessWidget {
       child: BlocConsumer<AddNoteCubit, AddNoteState>(
         listener: (context, state) {
           if (state is AddNoteFailure) {
-            print('failed ${state.errmessage}');
+            if (kDebugMode) {
+              print('failed ${state.errmessage}');
+            }
           }
           if (state is AddNoteSuccess) {
             Navigator.pop(context);
@@ -30,7 +35,7 @@ class AddNoteBottomSheet extends StatelessWidget {
                 left: 16,
                 bottom: MediaQuery.of(context).viewInsets.bottom,
               ),
-              child: SingleChildScrollView(child: AddNoteForm()),
+              child: const SingleChildScrollView(child: AddNoteForm()),
             ),
           );
         },
